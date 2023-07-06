@@ -12,9 +12,9 @@ def get_wheater(city_code: str, lang_code: str, params=''):
 
 
 def main():
-    print(get_wheater('london', 'en', 'nTqu').text)
-    print(get_wheater('svo', 'en', 'nTqu').text)
-    print(get_wheater('череповец', 'en', 'nTqu').text)
+    print(get_wheater('london', 'ru', 'MnTq').text)
+    print(get_wheater('svo', 'ru', 'MnTq').text)
+    print(get_wheater('череповец', 'ru', 'MnTq').text)
 
 
 if __name__ == '__main__':
