@@ -1,13 +1,17 @@
 import requests
 
-URL = 'https://wttr.in/{city_code}?{params}lang={lang_code}'
+URL = 'https://wttr.in/'
+payload = {
+    'MnTQ': '',
+    '%26': '',
+    'lang': 'ru',
+}
 
 
-def get_wheater(city_code: str, lang_code: str, params=''):
-    params += '&'
-    url = URL.format(city_code=city_code, lang_code=lang_code, params=params)
-    response = requests.get(url)
+def get_wheater(city_code: str, payload):
+    response = requests.get(URL, params=payload)
     response.raise_for_status()
+    print(response.url)
     return response
 
 
