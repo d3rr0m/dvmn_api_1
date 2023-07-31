@@ -8,7 +8,7 @@ payload = {
 }
 
 
-def get_wheater(city_code: str, payload):
+def get_weather(city_code: str, payload):
     response = requests.get(URL, params=payload)
     response.raise_for_status()
     print(response.url)
@@ -16,9 +16,9 @@ def get_wheater(city_code: str, payload):
 
 
 def main():
-    print(get_wheater('london', 'ru', 'MnTq').text)
-    print(get_wheater('svo', 'ru', 'MnTq').text)
-    print(get_wheater('череповец', 'ru', 'MnTq').text)
+    print(get_weather('london', 'ru', 'MnTq').text)
+    print(get_weather('svo', 'ru', 'MnTq').text)
+    print(get_weather('череповец', 'ru', 'MnTq').text)
 
 
 if __name__ == '__main__':
