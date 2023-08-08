@@ -1,5 +1,6 @@
 import requests
 
+
 URL = 'https://wttr.in/'
 payload = {
     'MnTQ': '',
@@ -10,7 +11,6 @@ payload = {
 def get_weather(city_code: str):
     response = requests.get(URL+city_code, params=payload)
     response.raise_for_status()
-    print(response.url)
     return response.text
 
 
